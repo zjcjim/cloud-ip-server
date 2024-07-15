@@ -14,6 +14,7 @@ def register_ip():
     
     if device_name and ip:
         device_info[device_name] = ip
+        print('name: ', device_name, 'ip:', ip)
         return jsonify({'status': 'success', 'name': device_name, 'ip': ip}), 200
     else:
         return jsonify({'status': 'failure', 'message': 'Invalid request'}), 400
